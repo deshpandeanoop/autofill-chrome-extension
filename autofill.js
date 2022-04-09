@@ -12,15 +12,11 @@ function submit() {
     //Eat away the exception, the value defaults to false.
   }
 
-window.alert(canAutofill);
   if(canAutofill === "false" || canAutofill == null) {
     return;
   }
 
-  window.alert("AutoFilling is kicking in!!");
-
   var xhttp = new XMLHttpRequest();
-
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
     	 var data = JSON.parse(this.responseText);
